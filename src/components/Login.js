@@ -8,9 +8,15 @@ export default function Login() {
     }
 
     return (
+        <>
         <div>
             <h1>Login here</h1>
+            <form>
+                Username:<input type="text"/> <br/>
+                Password:<input type="password"/>
+            </form>
             <button onClick={aunthenticates}>Login</button>
         </div>
+        </>
     );
 }
