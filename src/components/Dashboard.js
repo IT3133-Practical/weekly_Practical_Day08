@@ -1,8 +1,7 @@
-export default function Dashboard()
-{
-    return(
-        <div>
-            <h1>Welcome to Dashboard</h1>
-        </div>
-    );
+export default function Dashboard() {
+  return (
+    <>
+      <h1>Welcome to Dashboard Hello Admin </h1>
+    </>
+  );
 }
