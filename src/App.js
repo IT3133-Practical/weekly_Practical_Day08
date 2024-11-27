@@ -1,30 +1,31 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
-import Home from './components/Home';
-import AboutUs from './components/Aboutus';
-import Contactus from './components/Contactus';
+import "./App.css";
+import { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
+import Aboutus from "./components/Aboutus";
+import Contactus from "./components/contactus";
+import Home from "./components/Home";
+import Dashboard from "./components/Dashboard";
+import Login from "./components/Login";
+function App() {
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/contactus" element={<Contactus />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Login />} />
+        </Routes>
+      </Router>
+    </>
+  );
+}
 
-      function App() {
-        return (
-          <div className="App">
-            <Router>
-            {/* <nav>
-        <ul>
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </nav> */}
-              <Routes>
-                <Route path='/' element={<Login />} />
-                <Route path='/dash' element={<Dashboard />} />
-                
-              </Routes>
-            </Router>
-          </div>
-        );
-      }
-      
-      export default App;
+export default App;
